@@ -17,4 +17,10 @@ public interface RoundTableService
      * @return
      */
     List<RoundTable> selectallroundtable();
+
+    /**
+     * 查询前四篇
+     * @return
+     */
+    List<RoundTable> selectFourth();
 }

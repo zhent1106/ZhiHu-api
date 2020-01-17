@@ -29,4 +29,9 @@ public class RoundTableController {
     public Result getAll(){
         return  Result.success(roundTableService.selectallroundtable());
     }
+
+    @GetMapping("/forth")
+    public  Result getForth(){
+        return  Result.success(roundTableService.selectFourth());
+    }
 }

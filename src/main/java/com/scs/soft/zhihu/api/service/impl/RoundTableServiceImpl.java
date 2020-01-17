@@ -27,4 +27,9 @@ public class RoundTableServiceImpl implements RoundTableService {
     public List<RoundTable> selectallroundtable() {
         return roundTableMapper.selectallroundtable();
     }
+
+    @Override
+    public List<RoundTable> selectFourth() {
+        return roundTableMapper.selectRecent();
+    }
 }
