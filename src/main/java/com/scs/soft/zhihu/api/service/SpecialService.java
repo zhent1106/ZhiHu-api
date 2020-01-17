@@ -19,7 +19,7 @@ public interface SpecialService {
     List<Map> selectAll();
 
     /**
-     *
+     *查找最近专题
      * @return List<Special>
      */
     List<Special> selectRecent();

@@ -21,10 +21,19 @@ public class SpecialController {
     @Resource
     private SpecialService specialService;
 
+    /**
+     * 展示最近专题
+     * @return
+     */
     @GetMapping
     public Result getRecent(){
         return Result.success(specialService.selectRecent());
     }
+
+    /**
+     * 展示所有专题
+     * @return
+     */
     @GetMapping(value = "/all")
     public  Result getAll(){
         return  Result.success(specialService.selectAll());
