@@ -23,4 +23,10 @@ class RoundTableMapperTest {
         specails.forEach(System.out::println);
 
     }
+
+    @Test
+    void selectRecent() {
+        List<RoundTable> s=roundTableMapper.selectRecent();
+        s.forEach(System.out::println);
+    }
 }

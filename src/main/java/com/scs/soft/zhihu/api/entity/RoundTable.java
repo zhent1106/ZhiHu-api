@@ -13,6 +13,7 @@ import lombok.Data;
 public class RoundTable {
     private  Integer id;
     private  String name;
+    private  String tinyBanner;
     private  String banner;
     private  String urlToken;
     private  Integer visitsCount;

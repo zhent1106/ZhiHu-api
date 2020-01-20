@@ -23,6 +23,6 @@ public interface RoundTableMapper {
     /**
      *
      */
-    @Select("SELECT * FROM t_round_table ORDER BY id DESC LIMIT 0,4")
+    @Select("SELECT * FROM t_round_table ORDER BY id LIMIT 0,4")
     List<RoundTable> selectRecent();
 }

@@ -1,25 +1,26 @@
 package com.scs.soft.zhihu.api.service;
 
+import com.scs.soft.zhihu.api.entity.Favorite;
 import com.scs.soft.zhihu.api.entity.RoundTable;
 
 import java.util.List;
 
 /**
- * @ClassName RoundTableService
+ * @ClassName FavoriteService
  * @Description TODO
  * @Author 田震
- * @Date 2020/1/17
+ * @Date 2020/1/19
  **/
-public interface RoundTableService {
+public interface FavoriteService {
     /**
      * 查询所有的发现页
      * @return
      */
-    List<RoundTable> selectallroundtable();
+    List<Favorite> selectallFavorite();
 
     /**
      * 查询前四篇
      * @return
      */
-    List<RoundTable> selectFourth();
+    List<Favorite> selectFourth();
 }
