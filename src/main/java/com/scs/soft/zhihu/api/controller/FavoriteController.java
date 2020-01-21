@@ -33,4 +33,8 @@ public class FavoriteController {
     public  Result getForth(){
         return  Result.success(favoriteService.selectFourth());
     }
+    @GetMapping("/page")
+    public  Result getByPage(int currentPage,int count){
+        return  Result.success(favoriteService.selectByPage(currentPage,count));
+    }
 }

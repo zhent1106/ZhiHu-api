@@ -22,6 +22,6 @@ public interface ColumnMapper {
     /**
      *查询前四个
      */
-    @Select("SELECT * FROM t_columns ORDER BY id  LIMIT 2,5")
+    @Select("SELECT * FROM t_columns ORDER BY id  LIMIT 2,4")
     List<Columns> selectRecent();
 }

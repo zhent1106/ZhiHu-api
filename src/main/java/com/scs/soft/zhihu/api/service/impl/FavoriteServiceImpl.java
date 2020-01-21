@@ -27,4 +27,16 @@ public class FavoriteServiceImpl implements FavoriteService {
     public List<Favorite> selectFourth() {
         return favoriteMapper.selectRecent();
     }
+
+    /**
+     * 根据页数查找
+     * @param currentPage
+     * @param count
+     * @return
+     */
+    @Override
+    public List<Favorite> selectByPage(int currentPage, int count) {
+        int dealCount=(currentPage-1)*count;
+        return favoriteMapper.selectByPage(dealCount,count);
+    }
 }

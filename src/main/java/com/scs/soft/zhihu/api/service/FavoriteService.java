@@ -23,4 +23,12 @@ public interface FavoriteService {
      * @return
      */
     List<Favorite> selectFourth();
+
+    /**
+     * 根据页数查找
+     * @param currentPage
+     * @param count
+     * @return
+     */
+    List<Favorite> selectByPage(int currentPage,int count);
 }

@@ -26,4 +26,12 @@ public interface FavoriteMapper {
     @Select("SELECT * FROM t_favorite ORDER BY id  LIMIT 2,4")
     List<Favorite> selectRecent();
 
+    /**
+     * 根据页数查找
+     * @param dealCount
+     * @param count
+     * @return
+     */
+    @Select("select * from t_favorite order by id limit #{dealCount},#{count}")
+    List<Favorite> selectByPage(int dealCount,int count);
 }
