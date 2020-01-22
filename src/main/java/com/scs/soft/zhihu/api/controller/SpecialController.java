@@ -38,4 +38,8 @@ public class SpecialController {
     public  Result getAll(){
         return  Result.success(specialService.selectAll());
     }
+//    @GetMapping("/page")
+//    public  Result getByPage(int currentPage,int count){
+//        return  Result.success(favoriteService.selectByPage(currentPage,count));
+//    }
 }

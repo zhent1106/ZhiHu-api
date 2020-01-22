@@ -27,4 +27,10 @@ public class ColumnsServiceImpl implements ColumnService {
     public List<Columns> selectFourth() {
         return columnMapper.selectRecent();
     }
+
+    @Override
+    public List<Columns> selectByPage(int currentPage, int count) {
+        int dealCount=(currentPage-1)*count;
+        return columnMapper.selectByPage(dealCount,count);
+    }
 }

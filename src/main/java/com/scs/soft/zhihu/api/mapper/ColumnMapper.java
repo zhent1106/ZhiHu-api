@@ -24,4 +24,12 @@ public interface ColumnMapper {
      */
     @Select("SELECT * FROM t_columns ORDER BY id  LIMIT 2,4")
     List<Columns> selectRecent();
+    /**
+     * 根据页数查找
+     * @param dealCount
+     * @param count
+     * @return
+     */
+    @Select("select * from t_columns order by id limit #{dealCount},#{count}")
+    List<Columns> selectByPage(int dealCount,int count);
 }

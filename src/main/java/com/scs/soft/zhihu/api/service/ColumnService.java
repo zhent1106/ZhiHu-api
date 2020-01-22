@@ -24,4 +24,11 @@ public interface ColumnService {
      */
     List<Columns> selectFourth();
 
+    /**
+     * 根据页数查找
+     * @param currentPage
+     * @param count
+     * @return
+     */
+    List<Columns> selectByPage(int currentPage,int count);
 }

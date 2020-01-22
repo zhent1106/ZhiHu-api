@@ -32,5 +32,8 @@ public class ColumnController {
     public  Result getForth(){
         return  Result.success(columnService.selectFourth());
     }
-
+    @GetMapping("/page")
+    public  Result getByPage(int currentPage,int count){
+        return  Result.success(columnService.selectByPage(currentPage,count));
+    }
 }
