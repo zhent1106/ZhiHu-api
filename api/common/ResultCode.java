@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author mq_xu
+ * @author
  * @ClassName StingUtil
  * @Description 使用一个枚举全局管理API状态码，这对线上环境定位错误问题和后续接口文档的维护都是很有帮助
  * @Date 2019/12/1
@@ -25,15 +25,17 @@ public enum ResultCode {
     USER_PASSWORD_ERROR(20002, "密码错误"),
     USER_ACCOUNT_ERROR(20003, "账号错误"),
     USER_VERIFY_CODE_ERROR(20004, "验证码错误"),
-    USER_CODE_TIMEOUT(20005,"验证码失效"),
-    USER_ACCOUNT_FORBIDDEN(20006, "账号已被禁用"),
-    USER_SIGN_UP_FAIL(20007, "用户注册失败"),
-    USER_SIGN_IN_FAIL(20008, "用户登录失败"),
-
+    USER_ACCOUNT_FORBIDDEN(20005, "账号已被禁用"),
+    SMS_ERROR(2010,"短信发送失败"),
+    USER_NOT_EXIST(20006, "用户不存在"),
+    USER_HAS_EXISTED(20007, "用户已存在"),
+    USER_SIGN_UP_FAIL(2008,"用户注册失败"),
+    USER_VERIFY_OVERDUE(2009,"验证码已过期"),
+    USER_CODE_TIMEOUT(2011,"验证码失效"),
+    DATABASE_ERROR(2012,"数据失败"),
 
     /* 业务错误：30001-39999 */
-    SMS_ERROR(30001, "短信业务出现问题"),
-    UPLOAD_ERROR(30002, "上传文件业务出现问题"),
+    SPECIFIED_QUESTIONED_USER_NOT_EXIST(30001, "某业务出现问题"),
 
     /* 系统错误：40001-49999 */
     SYSTEM_INNER_ERROR(40001, "系统繁忙，请稍后重试"),
@@ -42,7 +44,6 @@ public enum ResultCode {
     RESULT_CODE_DATA_NONE(50001, "数据未找到"),
     DATA_IS_WRONG(50002, "数据有误"),
     DATA_ALREADY_EXISTED(50003, "数据已存在"),
-    DATABASE_ERROR(50004, "数据库操作异常"),
 
     /* 接口错误：60001-69999 */
     INTERFACE_INNER_INVOKE_ERROR(60001, "内部系统接口调用异常"),
